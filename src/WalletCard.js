@@ -3,7 +3,7 @@
 import React, {useState} from 'react'
 import {ethers} from 'ethers'
 import './WalletCard.css'
-import detectEthereumProvider from '@metamask/detect-provider';
+//import detectEthereumProvider from '@metamask/detect-provider';
 
 /*var provider;
 const prv = async () =>{
@@ -39,9 +39,9 @@ const WalletCard = () => {
 	);
 		}
 	
-	if(isMobileDevice() && window.ethereum){
+	/*if(isMobileDevice() && window.ethereum){
 		connectWalletHandler();
-	}
+	}*/
 	
 	const connectWalletHandler = () => {
 		if (window.ethereum && window.ethereum.isMetaMask) {
