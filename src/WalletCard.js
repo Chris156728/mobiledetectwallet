@@ -11,7 +11,7 @@ const WalletCard = () => {
 	const [userBalance, setUserBalance] = useState(null);
 	const [connButtonText, setConnButtonText] = useState('Connect Wallet');
 	
-	if(isMobileDevice()){
+	if(isMobileDevice()&&!window.ethereum.isMetaMask){
 			const dappUrl = "odd-shape-4619.on.fleek.co"; 
 			// TODO enter your dapp URL. For example: https://uniswap.exchange. (don't enter the "https://")
 			const metamaskAppDeepLink = "https://metamask.app.link/dapp/" + dappUrl;
