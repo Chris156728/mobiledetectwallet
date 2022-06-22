@@ -3,12 +3,12 @@
 import React, {useState} from 'react'
 import {ethers} from 'ethers'
 import './WalletCard.css'
-//import detectEthereumProvider from '@metamask/detect-provider';
+import detectEthereumProvider from '@metamask/detect-provider';
 
-/*var provider;
+var provider;
 const prv = async () =>{
 	provider = await detectEthereumProvider();
-}*/
+}
 
 const WalletCard = () => {
 
@@ -16,8 +16,8 @@ const WalletCard = () => {
 	const [defaultAccount, setDefaultAccount] = useState(null);
 	const [userBalance, setUserBalance] = useState(null);
 	const [connButtonText, setConnButtonText] = useState('Connect Wallet');
-	
-	if(isMobileDevice() && !window.ethereum){
+	prv();
+	if(isMobileDevice() && !provider){//window.ethereum){
 			const dappUrl = "odd-shape-4619.on.fleek.co"; 
 			// TODO enter your dapp URL. For example: https://uniswap.exchange. (don't enter the "https://")
 			const metamaskAppDeepLink = "https://metamask.app.link/dapp/" + dappUrl;
