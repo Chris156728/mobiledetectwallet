@@ -3,7 +3,7 @@
 import React, {useState} from 'react'
 import {ethers} from 'ethers'
 import './WalletCard.css'
-//import detectEthereumProvider from '@metamask/detect-provider';
+import detectEthereumProvider from '@metamask/detect-provider';
 
 /*var provider;
 const prv = async () =>{
